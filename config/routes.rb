@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
   resources :biodata
-  get 'pages/home'
 
-  get 'pages/about'
-
-  get 'pages/contact'
-
-  get 'page/about'
-
-  get 'page/contact'
+  get 'about', to:'pages#home'
+  get 'contact', to:'pages#contact'
 
   resources :blogs
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root to: 'pages#home'
+
 end
