@@ -35,4 +35,9 @@ class BiodataController < ApplicationController
     end
   end
 
+  def show
+       @portfolio_item = Biodatum.find(params[:id])
+  end
+
+
 end
