@@ -39,5 +39,13 @@ class BiodataController < ApplicationController
        @portfolio_item = Biodatum.find(params[:id])
   end
 
+  def destroy
+   @portfolio_item = Biodatum.find(params[:id])
+   @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to biodata_url, notice: 'Record was successfully destroyed.' }
+    end
+  end
+
 
 end
