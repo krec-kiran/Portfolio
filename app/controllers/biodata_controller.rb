@@ -1,0 +1,2 @@
+class BiodataController < ApplicationController
+end
