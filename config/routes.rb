@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
-  resources :biodata
-  get 'pages/home'
+  resources :biodata, except: [:show]
+  get 'biodata/:id', to:'biodata#show'
 
-  get 'pages/about'
 
-  get 'pages/contact'
+  get 'about', to:'pages#home'
+  get 'contact', to:'pages#contact'
 
-  get 'page/about'
+  resources :blogs do
+    member do
+      get :toggle_status
+     end
+  end
 
-  get 'page/contact'
+  root to: 'pages#home'
 
-  resources :blogs
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
