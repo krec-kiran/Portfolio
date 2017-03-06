@@ -8,7 +8,7 @@ class BiodataController < ApplicationController
   end
 
   def create
-  @portfolio_item = Biodatum.new(params.require(:biodatum).permit(:title, :subtitle, :body))
+    @portfolio_item = Biodatum.new(params.require(:biodatum).permit(:title, :subtitle, :body))
 
     respond_to do |format|
       if @portfolio_item.save
@@ -24,24 +24,24 @@ class BiodataController < ApplicationController
   end
 
   def update
-   @portfolio_item = Biodatum.find(params[:id])
+    @portfolio_item = Biodatum.find(params[:id])
 
-   respond_to do |format|
+    respond_to do |format|
       if @portfolio_item.update(params.require(:biodatum).permit(:title, :subtitle, :body))
         format.html { redirect_to biodata_path, notice: 'The record was successfully updated.' }
       else
         format.html { render :edit }
-       end
+      end
     end
   end
 
   def show
-       @portfolio_item = Biodatum.find(params[:id])
+    @portfolio_item = Biodatum.find(params[:id])
   end
 
   def destroy
-   @portfolio_item = Biodatum.find(params[:id])
-   @portfolio_item.destroy
+    @portfolio_item = Biodatum.find(params[:id])
+    @portfolio_item.destroy
     respond_to do |format|
       format.html { redirect_to biodata_url, notice: 'Record was successfully destroyed.' }
     end
