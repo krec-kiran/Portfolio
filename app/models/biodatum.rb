@@ -1,5 +1,8 @@
 class Biodatum < ApplicationRecord
   has_many :teches
+
+  accepts_nested_attributes_for :teches,
+                          reject_if: lambda { |attrs| attrs['name'].blank? }
  include Placeholder
     def self.angular
       where(subtitle: 'Angular')
