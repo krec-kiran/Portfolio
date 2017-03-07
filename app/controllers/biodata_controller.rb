@@ -3,6 +3,10 @@ class BiodataController < ApplicationController
     @portfolio_item = Biodatum.all
   end
 
+  def angular
+    @angular_portfolio_item = Biodatum.angular
+  end
+
   def new
     @portfolio_item = Biodatum.new
   end
