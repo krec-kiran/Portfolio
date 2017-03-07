@@ -1,4 +1,5 @@
 class Biodatum < ApplicationRecord
+  has_many :teches
  include Placeholder
     def self.angular
       where(subtitle: 'Angular')

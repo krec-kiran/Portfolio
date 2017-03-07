@@ -67,3 +67,12 @@ end
 
 puts "1 portfolio item created"
 
+
+3.times do | t |
+  Biodatum.last.teches.create!(
+    name: "Technology #{t}")
+end
+
+puts "3 technologies created"
+
+
