@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :biodata, except: [:show]
+
+  get 'angular-items', to:'biodata#angular'
+
   get 'biodata/:id', to:'biodata#show'
 
 
