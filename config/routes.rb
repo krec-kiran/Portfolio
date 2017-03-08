@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :biodata, except: [:show]
 
   get 'angular-items', to:'biodata#angular'
