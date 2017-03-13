@@ -15,6 +15,11 @@ class ApplicationController < ActionController::Base
     @copyright = DevcampViewTool::Renderer.copyright "Kiran Kotresh", "All rights reserved"
  end
 
+def but_copyright
+    @copyright = DevcampViewTool::Renderer.copyright "Kiran Kotresh", "All rights reserved"
+ end
+
+
 end
 
 
