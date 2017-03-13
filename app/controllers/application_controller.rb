@@ -10,7 +10,14 @@ class ApplicationController < ActionController::Base
  def set_copyright
     @copyright = DevcampViewTool::Renderer.copyright "Kiran Kotresh", "All rights reserved"
  end
+
+  def bet_copyright
+    @copyright = DevcampViewTool::Renderer.copyright "Kiran Kotresh", "All rights reserved"
+ end
+
 end
+
+
 
 
 module DevcampViewTool
