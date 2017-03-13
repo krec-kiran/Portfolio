@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   get 'biodata/:id', to:'biodata#show'
 
 
-  get 'about', to:'pages#home'
-  get 'contact', to:'pages#contact'
+  get 'about-me', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+
 
   resources :blogs do
     member do
