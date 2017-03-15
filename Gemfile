@@ -59,3 +59,10 @@ gem 'devise', '~> 4.2'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
 gem 'petergate'
+
+gem 'phonelib'
+
+gem 'mail_form'
+gem 'simple_form'
+
+

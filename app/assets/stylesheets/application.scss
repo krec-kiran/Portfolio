@@ -171,6 +171,53 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 42rem;
+    width: 65rem;
   }
 }
+
+/*
+ * Custom Styles
+ */
+
+.card-block {
+  color: black;
+  text-align: left;
+}
+
+.auth-links a {
+  color: black;
+}
+
+
+.register-text {
+  text-align: right;
+}
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+}
+
+.simple_form label {
+  float: left;
+  width: 100px;
+  text-align: left;
+}
+
+.spacer {
+    margin-top: 40px; /* define margin as you see fit */
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

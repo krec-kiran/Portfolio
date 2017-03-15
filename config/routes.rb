@@ -8,8 +8,13 @@ Rails.application.routes.draw do
 
 
   get 'about-me', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
+  # get 'contact', to: 'pages#contact'
 
+  # get 'contact', to: 'messages#new', as: 'contact'
+  # post 'contact', to: 'messages#create'
+
+   match '/contacts',     to: 'contacts#new',             via: 'get'
+   resources "contacts", only: [:new, :create]
 
   resources :blogs do
     member do
