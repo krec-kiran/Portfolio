@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Portfolio</title>
     <%= csrf_meta_tags %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
 
-    <%= render "shared/nav", location: 'top' %>
+        <%= render "shared/application_nav"%>
 
-    <% if current_user.is_a?(GuestUser) %>
-      <%= link_to "Register", new_user_registration_path %>
-      <%= link_to "Login", new_user_session_path %>
-    <% else %>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% end %>
-    <%= yield %>
+        <%= login_helper %>
 
-    <%= @copyright %>
 
-  <p>
-    <% if session[:source] %>
-    Thanks for visiting from <%= session[:source] %>
-    <% end %>
- </p>
+        <%= yield %>
 
+        <%= @copyright %>
+        <p>
+          <% if session[:source] %>
+          Thanks for visiting from <%= session[:source] %>
+         <% end %>
+        </p>
+        </div>
+      </div>
+    </div>
 
   </body>
 
