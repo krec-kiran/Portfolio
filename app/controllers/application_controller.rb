@@ -1,10 +1,26 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  include DeviseWhitelist
+  include SetSource
+  include CurrentUserConcern
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :PIN])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :PIN])
+  before_action :set_copyright
+
+ def set_copyright
+    @copyright = DevcampViewTool::Renderer.copyright "Kiran Kotresh", "All rights reserved"
+ end
+
+end
+
+
+
+
+module DevcampViewTool
+  class Renderer
+    def self.copyright name,msg
+      "&copy; #{Time.now.year} | <b>#{name}</b> #{msg}".html_safe
+    end
   end
 end
+
