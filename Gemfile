@@ -53,3 +53,19 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'friendly_id', '~> 5.1.0'
+
+gem 'devise', '~> 4.2'
+
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
+gem 'petergate'
+
+gem 'phonelib'
+
+gem 'mail_form'
+gem 'simple_form'
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
+

@@ -1,0 +1,83 @@
+
+ <div>
+   <br>
+   <div class="row">
+     <div class="col-md-6">
+     <h3 class="text-left">Get in touch</h3>
+       <br>
+        <%= simple_form_for @contact, :html => {:style=> 'width: 300px'} do |f| %>
+        <%= f.input :name, :required => true %>
+        <%= f.input :email, :required => true %>
+        <%= f.input :message, :as => :text, :required => true %>
+      </br>
+
+        <div>
+          <%= f.button :submit, 'Send message', class: 'btn btn-primary' %>
+        </div>
+
+       <% end %>
+     </br>
+    </div>
+
+
+
+  <div class="col-md-6 pull-right">
+  <h3>Office Address</h3>
+  <p></p>
+    <div>#7 Primrose Walk </div>
+    <div> Paddock Wood, Tonbridge , TN12 6BJ</div>
+    <p>
+    <h4>Phone</h4>
+    <p><%= number_to_phone "+44(0)7411225879" %></p>
+    </p>
+    <h4>Email</h4>
+    <p><a href="mailto:krec.kiran@gmail.com?subject=PortfolioContact" "email me">krec.kiran@gmail.com</a> </p>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.4383553164944!2d0.3905120512337389!3d51.17414307948155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df381f281fe45d%3A0x3e4c829314bbfe2e!2s7+Primrose+Walk%2C+Paddock+Wood%2C+Tonbridge+TN12+6BJ!5e0!3m2!1sen!2suk!4v1489582074220" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+   </div>
+
+   </div>
+</div>
+
+  <!-- <div class="row">
+  <div align="right" class="col-md-12">
+
+    <h3>office Address</h3>
+
+    <p>#7 Primrose Walk, Paddock Wood, Tonbridge TN12 6BJ</p>
+
+    <h3>Phone</h3>
+
+    <p><%= number_to_phone "+44(0)7411225879" %></p>
+
+    <h3>Email</h3>
+
+    <p><a href="mailto:krec.kiran@gmail.com?subject=PortfolioContact" "email me">Email me</a> </p>
+
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.4383553164944!2d0.3905120512337389!3d51.17414307948155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df381f281fe45d%3A0x3e4c829314bbfe2e!2s7+Primrose+Walk%2C+Paddock+Wood%2C+Tonbridge+TN12+6BJ!5e0!3m2!1sen!2suk!4v1489582074220" width="450" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+  </div>
+  </div> -->
+
+<!--
+  <div class="row">
+  <div align="right" class="col-md-16">
+
+    <h3>office Address</h3>
+
+    <p>#7 Primrose Walk, Paddock Wood, Tonbridge TN12 6BJ</p>
+
+    <h3>Phone</h3>
+
+    <p><%= number_to_phone "+44(0)7411225879" %></p>
+
+    <h3>Email</h3>
+
+    <p><a href="mailto:krec.kiran@gmail.com?subject=PortfolioContact" "email me">Email me</a> </p>
+  </div>
+
+  <div class="col-md-6">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.4383553164944!2d0.3905120512337389!3d51.17414307948155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df381f281fe45d%3A0x3e4c829314bbfe2e!2s7+Primrose+Walk%2C+Paddock+Wood%2C+Tonbridge+TN12+6BJ!5e0!3m2!1sen!2suk!4v1489582074220" width="450" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+
+  </div> -->
+
