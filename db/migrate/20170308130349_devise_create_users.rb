@@ -11,7 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
 
        ## Custom fields
       t.string :name
-      t.string :PIN
+      #t.string :PIN
 
       ## Rememberable
       t.datetime :remember_created_at
